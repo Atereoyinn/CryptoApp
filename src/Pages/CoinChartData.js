@@ -7,13 +7,12 @@ const CoinChartData = ({ info }) => {
  
   const { id } = useParams();
 
-  const callBack = () => {
-    if (el.id == id) {
+  const callBack = (arg) => {
+    if (arg.id == id) {
       return el;
     }
   };
- 
-  const filteredResponse = info.filter(el =>  callBack());
+  const filteredResponse = info.filter(el =>  callBack(el));
 
   const loopingThrough = filteredResponse.map((item) => (
     <Chart
