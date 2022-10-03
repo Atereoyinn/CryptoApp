@@ -22,14 +22,14 @@ if(loading){
 }else{
   return (
     <Container>
-      <Grid container spacing={4}>
+      <Grid container style={{display:"flex"}} spacing={4}>
         <Grid className="container" item xs={12}>
-          <span>{coin_name}</span>
-          <span>{symbol}</span>
-          <span>$ {price.toLocaleString()}</span>
-          <img src={image} alt={coin_name} />
-          <span> $ {marketcap.toLocaleString()}</span>
-          <span>{colorAction}</span>
+          <span style={{flex:"1",textAlign:"center"}}>{coin_name}</span>
+          <span style={{flex:"1",textAlign:"center"}}>{symbol}</span>
+          <span style={{flex:"1",textAlign:"center"}}>$ {price.toLocaleString()}</span>
+          <img style={{flex:"1",textAlign:"center"}} src={image} alt={coin_name} />
+          <span style={{flex:"1",textAlign:"center"}}> $ {marketcap.toLocaleString()}</span>
+          <span style={{flex:"1",textAlign:"center"}}>{colorAction}</span>
         </Grid>
       </Grid>
     </Container>

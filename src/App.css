@@ -9,6 +9,10 @@ body {
 .Link {
     text-decoration: none;
 }
+.Searchbar{
+    margin: 0;
+    padding: 0;
+}
 .container {
     display: flex;
     justify-content: space-between;
@@ -18,8 +22,8 @@ body {
 }
 
 .container img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 .Header {
     display: flex;
@@ -31,4 +35,29 @@ body {
     font-weight: bolder;
     font-size: 20px;
     color: rgb(224, 207, 207);
+}
+
+@media (max-width:600px){
+    body{
+        padding-top: 10px;
+    }
+    .datatracker{
+        font-size: 15px;
+    }
+    .Searchbar{
+        font-size: 15px;
+    }
+    .Header{
+        padding: 5px;
+        font-size: 10px;
+    }
+    .container{
+        font-size: 5px;
+    }
+    .container img{
+        margin: 5px;
+        width: 15px;
+        height: 15px;
+    }
+
 }

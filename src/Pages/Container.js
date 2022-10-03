@@ -14,7 +14,6 @@ const Container = ({ info, errorData, isLoading }) => {
   const renderFunction = () => {
     const inputField = (
       <SearchBar
-        filtered={filteredInfo}
         searchTerm={search}
         setSearchTerm={setSearch}
       />
@@ -40,12 +39,12 @@ const Container = ({ info, errorData, isLoading }) => {
       <>
         {inputField}
         <div className="Header">
-          <p>Coin Name</p>
-          <p>Coin Symbol</p>
-          <p>Coin Price</p>
-          <p>Coin Logo</p>
-          <p>Market Cap</p>
-          <p>24H Price Change</p>
+          <p style={{flex:"1",textAlign:"center"}}>Coin Name</p>
+          <p style={{flex:"1",textAlign:"center"}}>Coin Symbol</p>
+          <p style={{flex:"1",textAlign:"center"}}>Coin Price</p>
+          <p style={{flex:"1",textAlign:"center"}}>Coin Logo</p>
+          <p style={{flex:"1",textAlign:"center"}}>Market Cap</p>
+          <p style={{flex:"1",textAlign:"center"}}>24H Price Change</p>
         </div>
         {display}
       </>

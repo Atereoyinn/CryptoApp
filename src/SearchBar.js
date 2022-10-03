@@ -14,16 +14,18 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
           fontSize: "30px",
         }}
       >
-        Search Coin...
+        <p className="Searchbar">Search Coin...</p>
       </FormLabel>
       
       <TextField
         style={{
-          background: "gray",
+          background: "lightgray",
+          color:"gray",
           width: "100%",
           marginTop: "20px",
           marginBottom: "10px",
         }}
+        placeholder="  Search for a coin"
         value={searchTerm}
         onChange={handleChange}
         fullWidth

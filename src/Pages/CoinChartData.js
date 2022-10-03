@@ -7,8 +7,10 @@ const CoinChartData = ({ info }) => {
  
   const { id } = useParams();
 
-  const filteredResponse = info.filter((el) => {
-    if (el.id == id) {
+   const filteredResponse = info.filter( (el) => {
+    if (el.id !== id) {
+      return "";
+    }else {
       return el;
     }
   });

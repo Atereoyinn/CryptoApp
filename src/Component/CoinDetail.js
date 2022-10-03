@@ -15,11 +15,11 @@ const CoinDetail = ({ name, price, ath, marketCap, percentageChange24H }) => {
   return (
     <Grid container>
       <Grid item xs={12}>
-        <div style={{display:"flex",justifyContent:"space-between"}}>
-        <h6>All Time High(ATH): {`$${ath.toLocaleString()}`}</h6>
-        <h6> Current Price: {`$${price.toLocaleString()}`}</h6>
-        <h3>{name}</h3>
-        <h6>Market Cap: {`$${marketCap.toLocaleString()}`}</h6>
+        <div style={{display:"flex"}}>
+        <h6 >All Time High(ATH): {`$${ath.toLocaleString()}`}</h6>
+        <h6 > Current Price: {`$${price.toLocaleString()}`}</h6>
+        <h3 >{name}</h3>
+        <h6 >Market Cap: {`$${marketCap.toLocaleString()}`}</h6>
         {priceStyling}
         </div>
       </Grid>
