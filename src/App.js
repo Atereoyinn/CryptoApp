@@ -20,6 +20,7 @@ const App = () => {
         setInfo(resp.data);
       })
       .catch((err) => setErrorData(err));
+      return ()=>setIsLoading(false);
   }, []);
 
   return (
