@@ -4,6 +4,9 @@ import CoinDisplay from "../Component/CoinDisplay";
 import SearchBar from "../SearchBar";
 import { Grid } from "@material-ui/core";
 
+export const headerStyle = {flex:"1",textAlign:"center"}
+
+
 const Container = ({ info, errorData, isLoading }) => {
   const [search, setSearch] = useState("");
 
@@ -20,9 +23,8 @@ const Container = ({ info, errorData, isLoading }) => {
     );
 
     const display = filteredInfo.map((item) => (
-      <Link to={`coins/${item.id}`} className="Link">
+      <Link key={item.market_cap.toString()} to={`coins/${item.id}`} className="Link">
         <CoinDisplay
-          key={item.symbol}
           loading={isLoading}
           errorData={errorData}
           coin_name={item.name}
@@ -39,12 +41,12 @@ const Container = ({ info, errorData, isLoading }) => {
       <>
         {inputField}
         <div className="Header">
-          <p style={{flex:"1",textAlign:"center"}}>Coin Name</p>
-          <p style={{flex:"1",textAlign:"center"}}>Coin Symbol</p>
-          <p style={{flex:"1",textAlign:"center"}}>Coin Price</p>
-          <p style={{flex:"1",textAlign:"center"}}>Coin Logo</p>
-          <p style={{flex:"1",textAlign:"center"}}>Market Cap</p>
-          <p style={{flex:"1",textAlign:"center"}}>24H Price Change</p>
+          <p style={headerStyle}>Coin Name</p>
+          <p style={headerStyle}>Coin Symbol</p>
+          <p style={headerStyle}>Coin Price</p>
+          <p style={headerStyle}>Coin Logo</p>
+          <p style={headerStyle}>Market Cap</p>
+          <p style={headerStyle}>24H Price Change</p>
         </div>
         {display}
       </>

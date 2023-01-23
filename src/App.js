@@ -3,7 +3,7 @@ import { Axios } from "./api/Axios";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import CoinChartData from "../src/Pages/CoinChartData";
-import Container from "../src/Pages/Container"
+import Container from "../src/Pages/Container";
 
 const App = () => {
   const [info, setInfo] = useState([]);
@@ -20,16 +20,16 @@ const App = () => {
         setInfo(resp.data);
       })
       .catch((err) => setErrorData(err));
-      return ()=>setIsLoading(false);
+    return () => setIsLoading(false);
   }, []);
 
   return (
     <>
       <div>
         <h1
-        className="datatracker"
+          className="datatracker"
           style={{
-            color: "rgb(14, 14, 199)",
+            color: "lightgray",
             display: "flex",
             justifyContent: "center",
             margin: "auto",

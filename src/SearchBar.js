@@ -8,9 +8,8 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
     <div style={{ padding: "10px", margin: "10px" }}>
       <FormLabel
         style={{
-          paddingBottom: "20px",
           fontWeight: "bold",
-          color: "blue",
+          color: "lightgray",
           fontSize: "30px",
         }}
       >
@@ -19,11 +18,12 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
       
       <TextField
         style={{
-          background: "lightgray",
+          background: "white",
           color:"gray",
           width: "100%",
           marginTop: "20px",
-          marginBottom: "10px",
+          borderRadius:"15px",
+          border:"none"
         }}
         placeholder="  Search for a coin"
         value={searchTerm}
